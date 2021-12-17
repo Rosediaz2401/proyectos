@@ -1,0 +1,117 @@
+:root{
+    --main-font:'Inter','Lato','Rubik', sans-serif;
+    --font-size:16px;
+    --main-color: #ffff;
+    --second-color: #222;
+    --container-width:1200px;
+}
+html{
+    box-sizing: border-box;
+    font-family: var(--main-font);
+    font-size: var(--font-size);
+    scroll-behavior:smooth;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    background-color:black;
+    color: white;
+    padding: 15px 0px;
+}
+.header-items{
+    display: flex;
+    justify-content: space-around;
+}
+.btn{
+    background-color: white;
+    color: black;
+    font-size: 10px;
+    border-radius: 47%;
+    padding: 10px;
+    font-weight: bold;
+}
+.buttons{
+    justify-content: space-around;
+}
+.main-text{
+    display: grid;
+    grid-template-columns: 20% 30%;
+    justify-content: center;
+    margin-left: 4px;
+}
+.images{
+    margin-right: 10px;
+    display: grid;
+    grid-template-columns: 40% 40%;
+    grid-template-rows: 34% 34%;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 3%;
+    margin-left: -15px;
+}
+.content-images{
+    border-radius: 12px;
+    width: 100%;
+}
+.footer{
+    display: flex;
+    position: sticky;
+    margin-top: 20px;
+}
+.logo,
+.nav-items img{
+    width: 15px;
+    height: 15px;
+    margin-right: 8px;
+    background-color: transparent;
+    border-radius: 43%;
+}
+.home{
+    font-size: 10px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    padding: 8px;
+}
+.m-l{
+    margin-left: 10px;
+    display: none;
+}
+h3{
+    font-size: 10px;
+    margin-left: 10px;
+}
+.nav-bar{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    z-index: 999;
+    background-color: white;
+    width: 100%;
+    padding-left: 1%;
+    justify-content: center;
+}
+.nav-list{
+    display: flex;
+    list-style: none;
+    display: none;
+}
+
+.search{
+    background-color: rgba(245, 233, 233, 0.829);
+    background-image: url(img/lupa.png);
+    background-size: 13px;
+    background-repeat: no-repeat;
+    border-radius: 7px;
+    font-size: 10px;
+    margin-left: 10px;
+    padding: 9px 19px;
+    background-position: left;
+    border: none;
+    width: 32%;
+}
+@media only screen and (max-width:450px){
+
+}
