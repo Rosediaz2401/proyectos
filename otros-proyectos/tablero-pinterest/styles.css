@@ -40,6 +40,7 @@ body{
     border-radius: 10%;
     padding: 10px;
     font-weight: bold;
+    cursor: pointer;
 }
 .buttons{
     justify-content: space-around;
@@ -57,13 +58,15 @@ body{
     margin-bottom: 20px;
 }
 .images{
-    margin: auto;
+    margin:0px 15px;
     display: grid;
-    grid-template-columns: 40% 40%;
-    grid-template-rows: 7% 7%;
+    grid-template-columns: repeat(2, minmax(0px, 1fr));
+    column-gap: 24px !important;
+    row-gap: 20px !important;
     justify-content: center;
     align-items: center;
-    grid-gap: .5%;
+    grid-row-gap: 0%;
+    grid-column-gap: 3%;
     padding-top: 150px;
     padding-bottom: 50px;
 }
@@ -180,18 +183,33 @@ body{
 }
 .logo,
 .nav-items img{
-    width: 15px;
-    height: 15px;
+    width: 35px;
+    height: 35px;
     margin-right: 8px;
     background-color: transparent;
     border-radius: 43%;
+    cursor: pointer;
 }
+.nav-special:hover{
+    background-color: rgb(216, 211, 211);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    padding: 5px;
+    opacity: 1;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+
 .home{
     font-size: 10px;
     background-color: black;
     color: white;
     border-radius: 50%;
     padding: 8px;
+    cursor: pointer;
 }
 .m-l{
     margin-left: 10px;
@@ -199,15 +217,14 @@ body{
 }
 h3{
     font-size: 10px;
+    cursor: pointer;
 }
 .nav-bar-footer{
     display: flex;
     align-items: center;
-    margin: 0px 20px;
     z-index: 999;
     background-color: white;
     width: 100%;
-    padding-left: 1%;
     justify-content: space-around;
 }
 .nav-list{
@@ -231,8 +248,8 @@ h3{
 }
 @media only screen and (min-width:400px){
 .logo{
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
 }
 .search{
     width: 40%;
@@ -249,12 +266,14 @@ h3{
         background-color: white;
         width: 100%;
         justify-content: space-around;
+        height: 110px;
     }
     .lupa{
         display: none;
     }
     .hoy{
         display: none;
+        cursor: pointer;
     }
     .search{
         width: 50%;
@@ -266,12 +285,9 @@ h3{
         position: fixed;
         background-color: white;
         width: 100%;
-        top: 9%;
+        top: 10%;
     }
-    .logo{
-        width: 25px;
-        height: 25px;
-    }
+
 
     .nav-list{
         display: flex;
@@ -297,7 +313,8 @@ h3{
         width: 96%;
     }
     .images{
-        grid-gap:.5%;
+        grid-row-gap:0%;
+        padding-top: 175px;
     }
     }
     @media only screen and (min-width:600px){
@@ -308,7 +325,7 @@ h3{
             top: 11%;
         }
         .images{
-            padding-top: 170px;
+            padding-top: 210px;
         }
         .btn{
             font-size: 12px;
@@ -319,16 +336,22 @@ h3{
             font-size: 13px;
         }
         .home{
+            border-radius: 20px;
             font-size: 15px;
+            padding: 13px;
         }
         .main-text{
             top: 13%;
         }
+        .images{
+            grid-template-columns: repeat(3, minmax(0px, 1fr));
+            padding-top: 230px;
+        }
     }
     @media only screen and (min-width:800px){
         .images{
-            grid-template-columns: 30% 30% 30%;
-            grid-template-rows: 15%;
+            grid-template-columns: repeat(4, minmax(0px, 1fr));
+            padding-top: 255px;
         }
         .main-text{
             margin-bottom: 10px;
@@ -347,7 +370,7 @@ h3{
     }
     @media only screen and (min-width:900px){
         .images{
-            grid-template-rows: 13%;
+            padding-top: 230px;
         }
         .logo{
             width: 35px;
@@ -382,14 +405,12 @@ h3{
     }
     @media only screen and (min-width:1000px){
     .images {
-        grid-template-rows: 16%;
-        grid-template-columns: 23% 23% 23% 23%;
+        grid-template-columns: repeat(5, minmax(0px, 1fr));
     }
 }   
 @media only screen and (min-width:1200px){
     .images {
-        grid-template-columns: 18% 18% 18% 18% 18%;
-        grid-template-rows: 20%;
+        grid-template-columns: repeat(6, minmax(0px, 1fr));
     }
     .nav-bar-header{
         margin-top: 20px;
