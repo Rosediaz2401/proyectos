@@ -200,6 +200,8 @@ body{
     position: relative;
     overflow: hidden;
     transition: all 0.4s ease-in-out 0s;
+    display: flex;
+    justify-content: space-around;
 }
 
 
@@ -394,7 +396,7 @@ h3{
             justify-content: space-evenly;
         }
         .main-text{
-            top: 8%;
+            top: 11%;
         }
         .btn{
             margin-left: 20px;
