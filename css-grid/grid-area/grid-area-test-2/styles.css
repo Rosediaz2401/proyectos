@@ -1,0 +1,62 @@
+body{
+    margin: 0;
+}
+.content{
+    height: 70vh;
+}
+.grid-1{
+    display: grid;
+    grid-template-columns: 60% 40% ;
+    grid-template-rows: 50vh max-content;
+    width: 100%;
+    height: 60vh;
+}
+.image-1{
+    height: 300px;
+    justify-self: center;
+    align-self: center;
+}
+.text{
+    justify-self: flex-start;
+    align-self: center;
+    font-size: 13px;
+}
+.text-1-2{
+    width: 71%;
+}
+.primary-text{
+    width: 75%;
+}
+h1,
+h4{
+    text-transform: uppercase;
+}
+.slide{
+    background-color: black;
+    width: 25%;
+    height: 50px;
+}
+.grid-2{
+    display: grid;
+    grid-template-columns: 35% 25% 35% ;
+    grid-template-rows: 40vh max-content;
+    width: 100%;
+    height: 60vh;
+}
+.image-2{
+    height: 215px;
+    justify-self: end;
+    align-self: center;
+}
+.img-2{
+    width: 57%;
+}
+.second-image{
+    justify-self: baseline;
+    width: 63%;
+}
+.second-text{
+    justify-self: self-end;
+    align-self: center;
+    padding: 67px;
+}
