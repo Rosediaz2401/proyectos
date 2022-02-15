@@ -1,0 +1,10 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\dom"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "construction-main"
+	}
+}

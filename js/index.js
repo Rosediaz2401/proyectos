@@ -449,7 +449,7 @@ palabrasConcatenadas += palabraDelUsuario;
 }while(palabraDelUsuario != "")
 
 alert(palabrasConcatenadas)
-*/
+
 
 let dia;
 
@@ -472,3 +472,225 @@ while(day !== "domingo"){
     alert("buen dia, excelente" + day)
 }
 }
+
+let array = ["joel", "ricardo", "alberto"];
+
+console.log(array[0]) // joel
+
+console.log(array)// joel ricardo alberto
+
+for (let i= 10; i >= 2; i--){
+    console.log ("Hola", i)
+}
+
+let compras =[ "leche", "huevo", "salchicha", "sal"];
+
+let indice = 0;
+while(indice < compras.length){
+    console.log(compras[indice]);
+    indice ++
+}
+
+for(let indice =0; indice < compras.length; indice++){
+    console.log(compras[indice])
+    
+}
+
+
+// tabla de multiplicar numero 7
+//quiero en pantalla el numero 1 al 10 por 7 y su resultado
+//1*7 = 7
+// 2 *7 = 7
+
+let multiplica = 1
+
+for( let tabla  = 0; multiplica.lenght; tabla +7){
+    console.log(multiplica(tabla))
+}
+
+let numero =7
+
+for(let i=1; i<=10; i++){
+let resultado = i*numero
+console.log(i + " * "+" = " + resultado)
+}
+
+let  numero = 7;
+
+
+for (let index = 1; index <= 10;  index++) {
+    let resultado = numero * index
+    console.log(index + "*" + numero + "=" + resultado);
+}
+
+let joel = [1, "Joel Lozano", 10]
+let richard = [3, "Ricardo Martinez", 9]
+let rosa = [4, "Rosa Díaz", 8]
+let roger = [10, "Roger Zenteno", 10]
+let blanca = [2, "Blanca Benitez", 8.5]
+let diego = [5, "Diego Flores", 7.7]
+let eduardo = [6, "Eduardo Vázquez", 7.1]
+let manuel = [7, "Manuel Espinoza", 8.5]
+let aulo = [9, "Aulo Guerrero", 8.6]
+let jazmin = [8, "Jazmin López", 6.3]
+let tom = [12, "tom cruze", 5.0]
+let bob = [11, "bob el constructor", 8.2]
+
+let alumnos = [joel, richard, rosa, roger, blanca, diego, eduardo, manuel, aulo, jazmin, tom, bob];
+
+//realizar un ciclo for que me diga cuando un alumno sacó una calificación menor 6
+// que imprima en pantalla "Alumno reprobado: [nombre del alumno]"
+//for [indice] [0] [1] [2]
+
+
+let joel = [1, "Joel Lozano", 10]
+let richard = [3, "Ricardo Martinez", 9]
+let rosa = [4, "Rosa Díaz", 8]
+let roger = [10, "Roger Zenteno", 10]
+let blanca = [2, "Blanca Benitez", 8.5]
+let diego = [5, "Diego Flores", 7.7]
+let eduardo = [6, "Eduardo Vázquez", 7.1]
+let manuel = [7, "Manuel Espinoza", 8.5]
+let aulo = [9, "Aulo Guerrero", 8.6]
+let jazmin = [8, "Jazmin López", 6.3]
+let tom = [12, "tom cruze", 5.0]
+let bob = [11, "bob el constructor", 8.2]
+
+let alumnos = [joel, richard, rosa, roger, blanca, diego, eduardo, manuel, aulo, jazmin, tom, bob];
+
+for(let i=0; i< alumnos.length; i++){
+    for(let j= 0; j < alumnos[i].length; j++){
+        if(j == 2 && alumnos[i][2] < 6){
+            console.log("alumno reprobado " + alumnos[i][j-1]);
+        }
+    }
+    }
+
+for(let i = 0; i< alumnos.length; i ++){
+    let alumno = alumnos[i];
+    if(alumno[2] < 6){
+        console.log("alumno reprobado " + alumno[1])
+    }
+}
+
+
+for(let i=1; i<=5; i++){
+    for(let j= 1; j<=5; j++){
+        console.log()
+    }
+    }
+
+
+
+const multiplicacion = 9
+const tope = 15
+
+let resultado;
+
+for(let i =1; i<=tope; i++){
+    resultado =multiplicacion * i;
+    console.log(multiplicacion + " x  " + i + " = "+ resultado) 
+}
+
+
+const tablas = 5
+let resultado;
+
+for(i =1; i<=tablas; i++){
+for(j = 1; j<= 10; j++){
+    resultado = i * j;
+    console.log(resultado)
+}
+}
+
+
+let garageManuel = ["Ranger", "lobo", "f-158", "Cheyene", "bronco"];
+let garageJoel = ["vocho", "tsuru","Lada", "Safari", "Jymmy"];
+
+let museo = [garageManuel, garageJoel];
+let dueno;
+
+for(let index=0; index < museo.length; index++){
+    for(let j= 0; j<museo[index].length; j++){
+        if(index=0){
+            dueno = "Manuel"
+        }else{
+            dueno ="Joel"
+        }
+    console.log("El ",museo[index][j],"es auto de", dueno )
+}
+}
+
+
+function suma(num1,num2){ // parametros son los valores que necesita mi funcion para trabajar
+    let total = num1 + num2;
+    return "La suma es  = "+total; // return = devolver o regresar un valor
+}
+// llamado a function, los parametros son separados por comas.
+let sumaTotal = suma(2,2);
+console.log(sumaTotal);
+
+
+function suma(num1, num2){
+    let total = num1 +num2;
+    console.log("La suma es " + total)
+}
+
+// si se hace de esta forma la funcion se queda hasta aqui, ya no se puede jugar con los parametros
+
+
+
+//Ejemplo con variables
+let nombre;
+let temperatura;
+let dolorCabeza;
+let diagnostico;
+
+function solicitarInformacion () {
+    nombre = prompt("Dame tu nombre");
+    temperatura = prompt ("Dame tu temperatura");
+    dolorCabeza = prompt("Tienes dolor de cabeza");
+}
+
+function diagnostico (){
+    if (temperatura >=36){
+        diagnostico = "Probablemente tienes covid"
+    } else{
+        diagnostico ="No tienes covid"
+    }
+}
+
+function mostrarResultado (){
+    console.log(diagnostico)
+}
+
+solicitarInformacion();
+diagnostico();
+mostrarResultado();
+
+
+
+
+function solicitarInformacion () {
+   let nombre = prompt("Dame tu nombre");
+   let temperatura = prompt ("Dame tu temperatura");
+   let dolorCabeza = prompt("Tienes dolor de cabeza");
+   
+   let mensaje =diagnostico(temperatura);
+   console.log(mensaje)
+}
+
+function diagnostico (temperatura){
+    if (temperatura >=36){
+        return "Probablemente tienes covid"
+    } else{
+        return "No tienes covid"
+    }
+}
+
+function mostrarResultado (diagnostico){
+    console.log(diagnostico)
+}
+
+solicitarInformacion();
+*/
