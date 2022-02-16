@@ -29,7 +29,7 @@ let personas = [
 function llenarTabla(){
     let tabla ="";
     for(let i=0; i<personas.length; i++){
-            tabla += "<tr><td>" + personas[i].nombre + "</td><td>" + personas[i].apellidoPaterno + "</td><td>" +  personas[i].edad + "</td><td>" + personas[i].ciudad + "</td><td>";
+            tabla += "<tr> <th scope='row'>"+(i+1)+"</th>></th><td>" + personas[i].nombre + "</td><td>" + personas[i].apellidoPaterno + "</td><td>" +  personas[i].edad + "</td><td>" + personas[i].ciudad + "</td><td>";
     }
     document.getElementById("body_personas").innerHTML = tabla;
 }

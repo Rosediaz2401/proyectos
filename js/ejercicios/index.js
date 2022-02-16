@@ -342,8 +342,16 @@ function mostrarResultado(resultado) {
 
 */
 
-
-
+let edad= 0;
+function mayorDeEdad (edad){
+        if(edad >=18){
+             console.log("Mayor de edad");
+             }else{
+                 console.log("Menor de edad")
+             }
+        }
+        
+        mayorDeEdad(20)
 
 
 
