@@ -340,7 +340,7 @@ function mostrarResultado(resultado) {
   document.getElementById("resultado").innerHTML = resultado;
 }
 
-*/
+
 
 let edad= 0;
 function mayorDeEdad (edad){
@@ -353,6 +353,29 @@ function mayorDeEdad (edad){
         
         mayorDeEdad(20)
 
+     
+function evaluate (numero){
+        if(numero > 0){
+             console.log("Positivo");
+             }else if(numero <0) {
+                 console.log("Negativo")
+             }else if(numero ==0){
+                console.log("cero")
+             }
+        }
+        
+        evaluate(20);
+        evaluate(-10);
+        evaluate(0);
 
 
 
+let pares = []
+
+for(let i=1; i<= 100; i++){
+        if((i%2) ===0){
+        pares.push(i);
+        }
+}
+console.log(pares);
+*/

@@ -32,6 +32,8 @@ var inventario = [
     }
 ]
 
+
+
 function showItems(){
     let row = document.getElementById("card-item");
     for(let i=0; i<inventario.length;i++){
@@ -43,11 +45,8 @@ function showItems(){
                 <div class="card-body">
                   <h5 class="card-title">${element.name}</h5>
                   <p class="card-text">${element.descripcion}</p>
-                  <a href= "detalle.html">Detalle</a>
-                  <button onclick =${saveData(element,i)}> Detalle</button>
-                  <button class="btn btn-primary" id="modalDetail type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal${i}"
-                  "
-                  onclick= ${showDetail(element,i)}>Comprar</button>
+                  <a href= "detalle.html" id="detallelink${i} class ="test">Detalle</a>
+                  <button class="btn btn-primary" id="modalDetail type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal${i}" "onclick= ${showDetail(element,i)}>Comprar</button>
                 </div>
                 </div>
                 </div>`;
@@ -55,11 +54,33 @@ function showItems(){
     row.insertAdjacentHTML("afterbegin",card);
 
     }
+    inventario.forEach((element,i) => {
+        let btn = document.getElementById("btnModal"+i)
+           btn.reloj = element
+            link.addEventListener("click", saveData);
+        });
+
+    inventario.forEach((element,i) => {
+        let link = document.getElementById("detailLink" +i)
+        link.reloj = element
+       link.addEventListener("click",saveData);
+    })
 }
+
+function saveData(evento) {
+    let reloj = evento.currentTarget.reloj;
+    localStorage.setItem("nombre", reloj.name);
+    localStorage.setItem("imagen", reloj.imagen);
+    localStorage.setItem("precio",reloj.precio);
+    localStorage.setItem("descripcion", reloj.descripcion);
+    localStorage.setItem("cantidad", reloj.cantidad);
+}
+
+
 showItems();
 
 saveData();
-function saveData(){
+function saveData(evento){
     localStorage.setItem("nombre","Invicta");
 }
 
@@ -91,6 +112,11 @@ function showDetail(element,i){
     divModal.insertAdjacentHTML("afterbegin",modal);
 }
 
+function showDetailV2(evento){
+let rel = evento.currentTarget.reloj;
+let titulo = document.getElementById("itemTitle")
+titulo.innerText = rel.name
+}
 
 
 
@@ -100,3 +126,28 @@ function showDetail(element,i){
 
 
 
+
+
+
+function retirar(){
+  let cantidad = 0
+  let restar = 0
+  if(cantidad <= 10){
+     console.log("Saldo Insuficiente, no se puede retirar")
+  }else{
+     cantidad = cantidad - restar;
+  }
+}
+
+retirar()
+
+
+
+function getUsuario(){
+  let usuario = document.getElementById("user-name");
+  console.log(usuario);
+  for(let i=0; i<cuentas.length;i++){
+     console.log(cuentas[i]);
+  }
+}
+getUsuario()
