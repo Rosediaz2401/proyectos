@@ -15,7 +15,7 @@ padding: 0;
 
 .background{
     background-image: url("img/bkg.jpg");
-    height: 1200px;
+    height: 900px;
 }
 .content{
     display: block;
@@ -25,7 +25,7 @@ padding: 0;
 }
 
 .input-group{
-    width: 70%;
+    width: 50%;
     margin: 50px auto;
 }
 .text-center img{
@@ -34,7 +34,7 @@ padding: 0;
 }
 .text-center{
     text-align: center;
-    padding-top: 300px;
+    padding-top: 100px;
 }
 .btn-soy{
     text-align: center;
@@ -47,7 +47,7 @@ padding: 0;
     font-weight: bold;
     line-height: 1.5;
     color: white;
-    padding: 0.375rem 2.75rem;
+    padding: 0.375rem 1.75rem;
     border-radius: 3.25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
@@ -62,4 +62,27 @@ padding: 0;
     font-size: 2.3rem;
     font-weight: bold;
 }
+.text{
+    text-align: center;
+    margin-top: -100px;
+}
+.pon-monto{
+    margin: 10px auto;
+}
+.operacion{
+    display: block;
+}
+.restar{
+    margin-top: 25px;
+}
+
+@media (min-width: 700px) {
+    .operacion{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .sum{
+        margin-top: 25px;
+    }
+  }
 

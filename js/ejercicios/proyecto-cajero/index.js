@@ -1,13 +1,13 @@
 
 
 let cuentas = [
-   { nombre:"m", saldo:200, password: "1"},
+   { nombre:"Mali", saldo:200, password: "helloworld"},
    { nombre:"Gera", saldo:290, password: "133t"},
    { nombre:"Maui", saldo:67, password: "123"},
 ]
 
-
-
+let saldoTotal = 0;
+let total = 0;
 let usuario = document.getElementById("user-name");
 let password = document.getElementById("password");
 let button = document.getElementById("submit");
@@ -28,7 +28,7 @@ button.addEventListener("click",function(){
       buttonPass.style.display='inline-block'
       button.style.display='none'
      }else{
-        alert("Usuario no existe")
+      Swal.fire('El usuario no existe') 
    }
 
    buttonPass.addEventListener("click",function(){
@@ -48,52 +48,39 @@ button.addEventListener("click",function(){
          abonar.addEventListener("click",abonarSaldo)
          retirar.addEventListener("click",retirarSaldo)
 
-         let total = parseInt(nombreUsuario[0].saldo)
-         let sumaNumeros =[total]
-         let restaNumero = []
          
+         //total = parseInt(nombreUsuario[0].saldo)
+         let saldoActual = Object.values(nombreUsuario[0])[1]
+      
 
          function abonarSaldo(){
-            let cantidad = document.getElementById("saldo-numero").value
-            
-            cantidad = parseInt(cantidad)        
-            sumaNumeros.push(cantidad)
-         
-            let saldoTotal = sumaNumeros.reduce(function(valorAnterior,valorActual){
-               return valorAnterior + valorActual
-            })
-            
-            if(saldoTotal >=990){
-               alert("Excede monto maximo de $990")
-            } else{
-               alert(`Tu nuevo saldo es de ${saldoTotal}`)
-               saldo.innerText=saldoTotal
+            let cantidad = document.getElementById("saldo-numero").value 
+            cantidad = parseInt(cantidad)     
+            saldoActual += cantidad;
+            console.log(saldoActual)
+
+            if(saldoActual > 990){
+               Swal.fire('Excede Monto')            
             }
+            else
+            saldo.innerText =saldoActual
           }
 
           function retirarSaldo(){
-            let cantidad = document.getElementById("saldo-numero").value
-            
-            cantidad = parseInt(cantidad) 
-
-
-            restaNumero.push(cantidad)
-            let saldoTotal = restaNumero.reduce(function(valorAnterior,valorActual){
-               return valorAnterior - valorActual
-            })
-
-            console.log(restaNumero)
            
-            if(saldoTotal <=10){
-               alert("Fodos insuficientes monto minimo $10")
-            } else{
-               alert(`Tu nuevo saldo es de ${saldoTotal}`)
-               saldo.innerText=saldoTotal
+            let cantidad = document.getElementById("saldo-numero").value 
+            saldoActual -= cantidad;
+            console.log(saldoActual)
+
+            if(saldoActual <10){
+               Swal.fire('Saldo Insuficiente')
             }
+            else
+            saldo.innerText =saldoActual
           }
          
       } else{
-         alert("Contraseña incorrecta")
+         Swal.fire('Contraseña Incorrecta')
    }
       
    })

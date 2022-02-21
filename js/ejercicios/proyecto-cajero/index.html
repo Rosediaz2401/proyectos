@@ -11,6 +11,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css">
     <title>Proyecto Cajero</title>
   </head>
 
@@ -25,7 +26,7 @@
           <input type="text" class="form-control" placeholder="Usuario" aria-label="Username" aria-describedby="basic-addon1" id="user-name"/>
         </div>
         <div class="input-group mb-3">
-            <input type="password" class="form-control confirm" placeholder="Contrasena" aria-label="Username" aria-describedby="basic-addon1" id="password"/>
+            <input type="password" class="form-control confirm" placeholder="Contraseña" aria-label="" aria-describedby="basic-addon1" id="password"/>
           </div>
     </div>
 
@@ -33,19 +34,25 @@
         <button id="submit" class="si-soy">Ingresar</button>
     </div>
     <div class="btn-soy">
-        <button id="submit-pass" class="validar si-soy">Validar Contrasena</button>
+        <button id="submit-pass" class="validar si-soy">Ingresar</button>
     </div>
+    <div class="text">
         <p id="bienvenido" class="entrar">
-          Bienvenido <span id="user"></span> <br> Tu saldo es:
-          <span id="saldo"></span>
+          Bienvenido <span id="user"></span> <br> Tu saldo es : <span id="saldo"></span>
         </p>
-        <br />
-        <input type="number" name="" id="saldo-numero" class="ingresar-num" />
-        <button id="abonar" class="sum">Abonar</button>
-        <button id="retirar" class="restar">Retirar</button>
+    </div>
+        <br/>
+        <div class="input-group mb-3 pon-monto">
+            <input type="number" class="form-control ingresar-num" placeholder="Ingresa Monto" aria-label="" aria-describedby="basic-addon1" id="saldo-numero"/>
+          </div>  
+
+          <div class="btn-soy operacion">
+            <button id="abonar" class="sum si-soy">Abonar</button>
+            <button id="retirar" class="restar si-soy">Retirar</button>
+        </div>
       </div>
     </main>
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
     <script src="index.js"></script>
   </body>
 </html>
